@@ -10,13 +10,10 @@ public class _11866 {
         int[] b = a.Execution();
         StringBuilder sb = new StringBuilder();
         sb.append("<");
-        for (int i : b) {
-            sb.append(i).append(", ");
+        for (int i = 0; i < b.length-1; i++) {
+            sb.append(b[i]).append(", ");
         }
-        sb.trimToSize();
-        sb.deleteCharAt(sb.length()-1).deleteCharAt(sb.length()-1);
-        sb.append(">");
-
+        sb.append(b[b.length-1]).append(">");
         System.out.println(sb);
     }
 }
