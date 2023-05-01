@@ -3,7 +3,7 @@ package Problem_Solve;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class _10845_1 {
+public class _10845 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
