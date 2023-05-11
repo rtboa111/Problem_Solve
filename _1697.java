@@ -2,7 +2,9 @@ package Problem_Solve;
 
 import java.io.*;
 import java.util.*;
-
+/*
+ * greedy and recursive and dynamic programming
+ */
 public class _1697 {
 
     public static void main(String[] args) throws IOException {
