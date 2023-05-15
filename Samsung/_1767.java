@@ -111,7 +111,6 @@ public class _1767 {
                     wire_count+y, core_count+1);
             taboo = wire_uninstall(taboo, 3, x, y);
         }
-        DFS(num_core+1, taboo, wire_count, core_count);
 
         DFS(num_core+1, taboo, wire_count, core_count);
     }
