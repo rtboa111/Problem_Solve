@@ -11,7 +11,7 @@ public class _1244 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
         int T = Integer.parseInt(br.readLine());
-        
+
         int[] num;
         int time;
         for (int i = 1; i <= T; i++) {
@@ -64,7 +64,6 @@ public class _1244 {
             }
             target++;
         }
-
     }
     static int[] swap(int[] num, int from, int to) {    // 위치교환
         int temp = num[from];
