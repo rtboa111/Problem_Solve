@@ -1,5 +1,5 @@
 package Problem_Solve.Progermmers;
-1
+
 import java.lang.Math;
 
 public class Integer_pair_between_two_circles {
