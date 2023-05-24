@@ -9,7 +9,6 @@ public class _1107 {
     static int N;
     static boolean[] isBroken = new boolean[10];
 
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
