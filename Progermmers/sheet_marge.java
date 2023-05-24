@@ -1,8 +1,5 @@
 package Problem_Solve.Progermmers;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 public class sheet_marge {
     static String[] commands = new String[]{"UPDATE 1 1 a", "UPDATE 1 2 b", "UPDATE 2 1 c", "UPDATE 2 2 d", "MERGE 1 1 1 2", "MERGE 2 2 2 1", "MERGE 2 1 1 1", "PRINT 1 1", "UNMERGE 2 2", "PRINT 1 1"};
     public static void main(String[] args) {
@@ -16,7 +13,6 @@ public class sheet_marge {
 class Solution {
     static int[] sheet = new int[2501];
     static String[] sheet_val = new String[2501];
-    static HashMap<String, ArrayList<Integer>> map = new HashMap<>();
 
     public String[] solution(String[] commands) {
 
