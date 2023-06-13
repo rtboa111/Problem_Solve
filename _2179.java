@@ -1,5 +1,6 @@
 package Problem_Solve;
 
+
 import java.io.*;
 import java.util.*;
 
@@ -10,30 +11,45 @@ public class _2179 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int N = Integer.parseInt(br.readLine());
         String s;
-        HashMap<String, String> map = new HashMap<>();
-        String key = "";
-        int max = 0;
+        HashMap<String, ArrayList<String>> map = new HashMap<>();
+        ArrayList<String> words = new ArrayList<>();
+        HashSet<String> key = new HashSet<>();
+        int max = -1;
         for (int i = 0; i < N; i++) {
             s = br.readLine();
-            for (int j = 1; j <= s.length(); j++) {
+            words.add(s);
+            for (int j = 0; j <= s.length(); j++) {
                 String x = s.substring(0, j);
                 if (map.containsKey(x)) {
-                    if (max < j) {
-                        key = x;
-                        map.put(x, map.get(x) + " " + s);
-                        max = j;
+                    if (max <= j) {
+                        if (max < j) {
+                            key = new HashSet<>();
+                            max = j;
+                        }
+                        key.add(x);
+                        ArrayList<String> str = map.get(x);
+                        if (str.size() < 2) {
+                            str.add(s);
+                        }
                     }
                 } else {
-                    map.put(s.substring(0, j), s);
+                    ArrayList<String> str = new ArrayList<>();
+                    str.add(s);
+                    map.put(s.substring(0, j), str);
                 }
             }
         }
-        if (max != 0) {
-            for (String x : map.get(key).split(" ")) {
-                bw.write(x);
-                bw.newLine();
+
+        for (String i : words) {
+            if (i.length() >= max && key.contains(i.substring(0, max))) {
+                for (String x : map.get(i.substring(0, max))) {
+                    bw.write(x);
+                    bw.newLine();
+                }
+                break;
             }
         }
+
         bw.flush();
         bw.close();
     }
