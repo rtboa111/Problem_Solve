@@ -3,7 +3,7 @@ package Problem_Solve;
 import java.io.*;
 import java.util.*;
 
-public class _MN {
+public class _28270 {
 
     static class Node {
         int idx, def;
