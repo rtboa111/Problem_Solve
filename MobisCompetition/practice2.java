@@ -1,30 +1,29 @@
 package Problem_Solve.MobisCompetition;
 
-import java.io.*;
+public class practice2 {
 
-public class _prectice2 {
     static int[] prefixSum;
     static int size;
 
-    static int solution(int[] cookie) {
+     public int solution(int[] cookie) {
         size = cookie.length;
         prefixSum = new int[size+1];
         for(int i = 1; i <= size; i++) {
             prefixSum[i] += prefixSum[i-1] + cookie[i-1];
         }
-        return divideConqure(size/2, 0, size);
+        return divideConquer(size/2, 0, size);
     }
 
-    static int divideConqure(int m, int l, int r) {
+    static int divideConquer(int m, int l, int r) {
         if(m <= l || m >= r) {
             return 0;
         }
-        int lMax = divideConqure((m+l)/2, l, m);
-        int rMax = divideConqure((r+m)/2, m, r);
-        int curMax = excute(m);
+        int lMax = divideConquer((m+l)/2, l, m);
+        int rMax = divideConquer((r+m)/2, m, r);
+        int curMax = execute(m);
         return Math.max(lMax, Math.max(rMax, curMax));
     }
-    static int excute(int m) {
+    static int execute(int m) {
         int l = m-1, r = m+1;
         if(l < 0 || r > size) {
             return 0;
