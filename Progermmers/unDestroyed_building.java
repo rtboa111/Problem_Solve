@@ -1,4 +1,4 @@
-package Problem_Solve;
+package Problem_Solve.Progermmers;
 
 public class unDestroyed_building {
 
