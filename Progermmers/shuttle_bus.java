@@ -1,4 +1,4 @@
-package Problem_Solve;
+package Problem_Solve.Progermmers;
 import java.util.PriorityQueue;
 
 public class shuttle_bus {
