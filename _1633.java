@@ -1,2 +1,4 @@
-package Problem_Solve;public class _1633 {
+package Problem_Solve;
+
+public class _1633 {
 }
